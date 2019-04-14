@@ -1,0 +1,18 @@
+after_script:
+  - docker images
+
+before_script:
+  - cd "$VERSION"
+  - IMAGE="gobyte-core:${VERSION/\//-}"
+
+env:
+  - VERSION=0.12
+  - VERSION=0.12/ubuntu
+
+language: bash
+
+script:
+  - docker build -t "$IMAGE" .
+  - docker run "$IMAGE" --version | grep "GoByte Core"
+
+services: docker
