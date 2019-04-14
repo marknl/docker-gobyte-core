@@ -2,10 +2,11 @@
 
 A gobyte-core docker image.
 
-[![marknl/gobyte-core][docker-pulls-image]][docker-hub-url] [![marknl/gobyte-core][docker-stars-image]][docker-hub-url]
+[![marknl/gobyte-core][docker-pulls-image]][docker-hub-url] [![marknl/gobyte-core][docker-stars-image]][docker-hub-url] [![marknl/docker-gobyte-core][travis-build]]
 
 ## Tags
-- `0.12.2.4`, `0.12`, `latest` ([0.12/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/Dockerfile))
+- `0.12.2.4`, `0.12`, `latest` ([0.12/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/0.12/Dockerfile))
+- `0.12.2.4-ubuntu`, `0.12-ubuntu`` ([0.12/ubuntu/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/0.12/ubuntu/Dockerfile))
 
 ## What is GoByte Core?
 
@@ -198,3 +199,4 @@ This image is officially supported on Docker version 18.06, with support for old
 [docker-hub-url]: https://hub.docker.com/r/marknl/gobyte-core
 [docker-pulls-image]: https://img.shields.io/docker/pulls/marknl/gobyte-core.svg?style=flat-square
 [docker-stars-image]: https://img.shields.io/docker/stars/marknl/gobyte-core.svg?style=flat-square
+[travis-build]: https://img.shields.io/travis/marknl/docker-gobyte-core.svg
