@@ -6,7 +6,7 @@ A gobyte-core docker image.
 
 ## Tags
 - `0.12.2.4`, `0.12`, `latest` ([0.12/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/0.12/Dockerfile))
-- `0.12.2.4-ubuntu`, `0.12-ubuntu`` ([0.12/ubuntu/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/0.12/ubuntu/Dockerfile))
+- `0.12.2.4-ubuntu`, `0.12-ubuntu` ([0.12/ubuntu/Dockerfile](https://github.com/marknl/docker-gobyte-core/blob/master/0.12/ubuntu/Dockerfile))
 
 ## What is GoByte Core?
 
