@@ -17,7 +17,7 @@ Other nodes need to be able to talk to your masternode. Therefor the docker host
 Launch a GoByte Core daemon with:
 
 ```sh
-> docker run --restart=always -d -p 12455:12455 --name gobytemn marknl/gobyte-core -printtoconsole -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY
+> docker run --restart=always -d -p 12455:12455 --name gobytemn marknl/gobyte-core -printtoconsole -externalip=1.2.3.4 -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY
 ```
 
 This will start a docker container from the image `marknl/gobyte-core`, map port `12455`, name it  `gobytemn` and run it as a daemon.
@@ -25,9 +25,12 @@ This will start a docker container from the image `marknl/gobyte-core`, map port
 
 The configuration options the GoByte Core daemon received are:
 - printtoconsole
+- externalip=1.2.3.4
 - masternode=1
 - max connections=16
 - masternodeprivkey=MASTRPRIVKEY
+
+**The "externalip" parameter is crucial for a functional masternode!**
 
 You may add more options if needed, see `docker run --rm -it marknl/gobyte-core --help` for all possible parameters.
 
@@ -40,11 +43,11 @@ As an example, two masternodes will be run on different IP addresses, 192.168.10
 Start the first GoByte Core daemon with:
 
 ```sh
-> docker run --restart=always -d -p 192.168.10.1:12455:12455 --name gobytemn01 marknl/gobyte-core -printtoconsole -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY01
+> docker run --restart=always -d -p 192.168.10.1:12455:12455 --name gobytemn01 marknl/gobyte-core -printtoconsole -externalip=192.168.10.1 -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY01
 ```
 
 ```sh
-> docker run --restart=always -d -p 192.168.10.2:12455:12455 --name gobytemn02 marknl/gobyte-core -printtoconsole -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY02
+> docker run --restart=always -d -p 192.168.10.2:12455:12455 --name gobytemn02 marknl/gobyte-core -printtoconsole -externalip=192.168.10.2 -masternode=1 -maxconnections=16 -masternodeprivkey=MASTERPRIVKEY02
 ```
 
 Now issue a `start-all` from within the wallet that contains the collateral.
